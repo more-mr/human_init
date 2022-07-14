@@ -1,127 +1,98 @@
-<!--            
-_____________________________________________
-|                 TODO                       | 
-|      ->turn white line into circle         |
-|      ->fix load delay or add load screen   |
-|      ->add more pages                      |
-|      ->darkmode!!!                         |
-|      ->figure out a way to clean html svgs |
-|      ->Make resposive, sizing issues       |
-|      ->add contact me                      |
-|      ->Site still under construction       |
-|____________________________________________|                         
--->
-
-
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- BOOTSTRAP CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <!-- BOOTSTRAP JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <!-- BOOTSTRAP 5 CSS only -->
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">-->
+        <!-- BOOTSTRAP 5 JavaScript Bundle with Popper -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> -->
 
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.2/dist/kute.min.js"></script>
+        <!-- BOOTSTRAP 4 CSS only -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- BOOTSTRAP 4 JavaScript Bundle with Popper -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <title>init_world</title>
-</head>
+        <link rel="stylesheet" href="css/style.css">
 
-<body>
-    <div id="container" >
-        <svg 
-        id="sideBarSvg" 
-        viewBox="0 0 900 600" >
-            <path id = "A00" d="M600 0L582 14.3C564 28.7 528 57.3 525 85.8C522 114.3 552 142.7 567.3 171.2C582.7 199.7 583.3 228.3 563.3 257C543.3 285.7 502.7 314.3 497.8 343C493 371.7 524 400.3 520.8 428.8C517.7 457.3 480.3 485.7 474.8 514.2C469.3 542.7 495.7 571.3 508.8 585.7L522 600L0 600L0 585.7C0 571.3 0 542.7 0 514.2C0 485.7 0 457.3 0 428.8C0 400.3 0 371.7 0 343C0 314.3 0 285.7 0 257C0 228.3 0 199.7 0 171.2C0 142.7 0 114.3 0 85.8C0 57.3 0 28.7 0 14.3L0 0Z" fill="#940f16"></path>
-            <path id = "A01" d="M457 0L439 14.3C421 28.7 385 57.3 368.7 85.8C352.3 114.3 355.7 142.7 375 171.2C394.3 199.7 429.7 228.3 429.3 257C429 285.7 393 314.3 389.5 343C386 371.7 415 400.3 439 428.8C463 457.3 482 485.7 490.7 514.2C499.3 542.7 497.7 571.3 496.8 585.7L496 600L0 600L0 585.7C0 571.3 0 542.7 0 514.2C0 485.7 0 457.3 0 428.8C0 400.3 0 371.7 0 343C0 314.3 0 285.7 0 257C0 228.3 0 199.7 0 171.2C0 142.7 0 114.3 0 85.8C0 57.3 0 28.7 0 14.3L0 0Z" fill="#830b16"></path>
-            <path id = "A02" d="M367 0L374.5 14.3C382 28.7 397 57.3 410.7 85.8C424.3 114.3 436.7 142.7 441.2 171.2C445.7 199.7 442.3 228.3 415.7 257C389 285.7 339 314.3 318.7 343C298.3 371.7 307.7 400.3 333.3 428.8C359 457.3 401 485.7 413.7 514.2C426.3 542.7 409.7 571.3 401.3 585.7L393 600L0 600L0 585.7C0 571.3 0 542.7 0 514.2C0 485.7 0 457.3 0 428.8C0 400.3 0 371.7 0 343C0 314.3 0 285.7 0 257C0 228.3 0 199.7 0 171.2C0 142.7 0 114.3 0 85.8C0 57.3 0 28.7 0 14.3L0 0Z" fill="#710815"></path>
-            <path id = "A03" d="M338 0L338.7 14.3C339.3 28.7 340.7 57.3 324.5 85.8C308.3 114.3 274.7 142.7 272.7 171.2C270.7 199.7 300.3 228.3 316.2 257C332 285.7 334 314.3 338 343C342 371.7 348 400.3 340.2 428.8C332.3 457.3 310.7 485.7 292.3 514.2C274 542.7 259 571.3 251.5 585.7L244 600L0 600L0 585.7C0 571.3 0 542.7 0 514.2C0 485.7 0 457.3 0 428.8C0 400.3 0 371.7 0 343C0 314.3 0 285.7 0 257C0 228.3 0 199.7 0 171.2C0 142.7 0 114.3 0 85.8C0 57.3 0 28.7 0 14.3L0 0Z" fill="#600613"></path>
-            <path id = "A04" d="M208 0L210.5 14.3C213 28.7 218 57.3 215.3 85.8C212.7 114.3 202.3 142.7 209.5 171.2C216.7 199.7 241.3 228.3 242.7 257C244 285.7 222 314.3 205.3 343C188.7 371.7 177.3 400.3 180.8 428.8C184.3 457.3 202.7 485.7 201.8 514.2C201 542.7 181 571.3 171 585.7L161 600L0 600L0 585.7C0 571.3 0 542.7 0 514.2C0 485.7 0 457.3 0 428.8C0 400.3 0 371.7 0 343C0 314.3 0 285.7 0 257C0 228.3 0 199.7 0 171.2C0 142.7 0 114.3 0 85.8C0 57.3 0 28.7 0 14.3L0 0Z" fill="#4f0510"></path>
-            <path id = "A05" d="M181 0L185.5 14.3C190 28.7 199 57.3 200 85.8C201 114.3 194 142.7 178.2 171.2C162.3 199.7 137.7 228.3 131.5 257C125.3 285.7 137.7 314.3 141.7 343C145.7 371.7 141.3 400.3 145.8 428.8C150.3 457.3 163.7 485.7 164.8 514.2C166 542.7 155 571.3 149.5 585.7L144 600L0 600L0 585.7C0 571.3 0 542.7 0 514.2C0 485.7 0 457.3 0 428.8C0 400.3 0 371.7 0 343C0 314.3 0 285.7 0 257C0 228.3 0 199.7 0 171.2C0 142.7 0 114.3 0 85.8C0 57.3 0 28.7 0 14.3L0 0Z" fill="#3e050b"></path>
-            <path id = "A06" d="M120 0L118.3 14.3C116.7 28.7 113.3 57.3 103.3 85.8C93.3 114.3 76.7 142.7 74.8 171.2C73 199.7 86 228.3 93.8 257C101.7 285.7 104.3 314.3 99.7 343C95 371.7 83 400.3 78.2 428.8C73.3 457.3 75.7 485.7 83.7 514.2C91.7 542.7 105.3 571.3 112.2 585.7L119 600L0 600L0 585.7C0 571.3 0 542.7 0 514.2C0 485.7 0 457.3 0 428.8C0 400.3 0 371.7 0 343C0 314.3 0 285.7 0 257C0 228.3 0 199.7 0 171.2C0 142.7 0 114.3 0 85.8C0 57.3 0 28.7 0 14.3L0 0Z" fill="#2f0303"></path>
+        <title>init_world</title>
+    </head>
+
+    <body>
         
-            <path d="M0 -300 Q 50 -100 0 1202" fill= "#ffffff"/>
-            <path d="M0 -300 Q 53 0 0 1202" fill="#2f0303"/>
-        
-            <path id = "A10" style="visibility:hidden" d="M604 0L593.5 14.3C583 28.7 562 57.3 541.2 85.8C520.3 114.3 499.7 142.7 476.5 171.2C453.3 199.7 427.7 228.3 425.7 257C423.7 285.7 445.3 314.3 469.3 343C493.3 371.7 519.7 400.3 513.2 428.8C506.7 457.3 467.3 485.7 446.8 514.2C426.3 542.7 424.7 571.3 423.8 585.7L423 600L0 600L0 585.7C0 571.3 0 542.7 0 514.2C0 485.7 0 457.3 0 428.8C0 400.3 0 371.7 0 343C0 314.3 0 285.7 0 257C0 228.3 0 199.7 0 171.2C0 142.7 0 114.3 0 85.8C0 57.3 0 28.7 0 14.3L0 0Z" fill="#940f16"></path>
-            <path id = "A11"  style="visibility:hidden" d="M478 0L486 14.3C494 28.7 510 57.3 485.8 85.8C461.7 114.3 397.3 142.7 369 171.2C340.7 199.7 348.3 228.3 357 257C365.7 285.7 375.3 314.3 391.8 343C408.3 371.7 431.7 400.3 431.2 428.8C430.7 457.3 406.3 485.7 402.2 514.2C398 542.7 414 571.3 422 585.7L430 600L0 600L0 585.7C0 571.3 0 542.7 0 514.2C0 485.7 0 457.3 0 428.8C0 400.3 0 371.7 0 343C0 314.3 0 285.7 0 257C0 228.3 0 199.7 0 171.2C0 142.7 0 114.3 0 85.8C0 57.3 0 28.7 0 14.3L0 0Z" fill="#830b16"></path>
-            <path id = "A12"  style="visibility:hidden" d="M327 0L332 14.3C337 28.7 347 57.3 367.2 85.8C387.3 114.3 417.7 142.7 408.7 171.2C399.7 199.7 351.3 228.3 329 257C306.7 285.7 310.3 314.3 331.5 343C352.7 371.7 391.3 400.3 386.3 428.8C381.3 457.3 332.7 485.7 312.7 514.2C292.7 542.7 301.3 571.3 305.7 585.7L310 600L0 600L0 585.7C0 571.3 0 542.7 0 514.2C0 485.7 0 457.3 0 428.8C0 400.3 0 371.7 0 343C0 314.3 0 285.7 0 257C0 228.3 0 199.7 0 171.2C0 142.7 0 114.3 0 85.8C0 57.3 0 28.7 0 14.3L0 0Z" fill="#710815"></path>
-            <path id = "A13" style="visibility:hidden" d="M255 0L256 14.3C257 28.7 259 57.3 268 85.8C277 114.3 293 142.7 302.5 171.2C312 199.7 315 228.3 300 257C285 285.7 252 314.3 237 343C222 371.7 225 400.3 244.8 428.8C264.7 457.3 301.3 485.7 320.3 514.2C339.3 542.7 340.7 571.3 341.3 585.7L342 600L0 600L0 585.7C0 571.3 0 542.7 0 514.2C0 485.7 0 457.3 0 428.8C0 400.3 0 371.7 0 343C0 314.3 0 285.7 0 257C0 228.3 0 199.7 0 171.2C0 142.7 0 114.3 0 85.8C0 57.3 0 28.7 0 14.3L0 0Z" fill="#600613"></path>
-            <path id = "A14"  style="visibility:hidden" d="M230 0L231.7 14.3C233.3 28.7 236.7 57.3 227.5 85.8C218.3 114.3 196.7 142.7 199.2 171.2C201.7 199.7 228.3 228.3 235.5 257C242.7 285.7 230.3 314.3 219.3 343C208.3 371.7 198.7 400.3 190.7 428.8C182.7 457.3 176.3 485.7 171.7 514.2C167 542.7 164 571.3 162.5 585.7L161 600L0 600L0 585.7C0 571.3 0 542.7 0 514.2C0 485.7 0 457.3 0 428.8C0 400.3 0 371.7 0 343C0 314.3 0 285.7 0 257C0 228.3 0 199.7 0 171.2C0 142.7 0 114.3 0 85.8C0 57.3 0 28.7 0 14.3L0 0Z" fill="#4f0510"></path>
-            <path id = "A15" style="visibility:hidden" d="M111 0L118 14.3C125 28.7 139 57.3 154 85.8C169 114.3 185 142.7 177 171.2C169 199.7 137 228.3 122.2 257C107.3 285.7 109.7 314.3 111 343C112.3 371.7 112.7 400.3 126.7 428.8C140.7 457.3 168.3 485.7 166.8 514.2C165.3 542.7 134.7 571.3 119.3 585.7L104 600L0 600L0 585.7C0 571.3 0 542.7 0 514.2C0 485.7 0 457.3 0 428.8C0 400.3 0 371.7 0 343C0 314.3 0 285.7 0 257C0 228.3 0 199.7 0 171.2C0 142.7 0 114.3 0 85.8C0 57.3 0 28.7 0 14.3L0 0Z" fill="#3e050b"></path>
-            <path id = "A16" style="visibility:hidden" d="M76 0L80.5 14.3C85 28.7 94 57.3 97.7 85.8C101.3 114.3 99.7 142.7 98.3 171.2C97 199.7 96 228.3 93.2 257C90.3 285.7 85.7 314.3 79.2 343C72.7 371.7 64.3 400.3 59.3 428.8C54.3 457.3 52.7 485.7 55.3 514.2C58 542.7 65 571.3 68.5 585.7L72 600L0 600L0 585.7C0 571.3 0 542.7 0 514.2C0 485.7 0 457.3 0 428.8C0 400.3 0 371.7 0 343C0 314.3 0 285.7 0 257C0 228.3 0 199.7 0 171.2C0 142.7 0 114.3 0 85.8C0 57.3 0 28.7 0 14.3L0 0Z" fill="#2f0303"></path>
-            
-            <path id = "A20" style="visibility:hidden" d="M535 0L531.5 14.3C528 28.7 521 57.3 500 85.8C479 114.3 444 142.7 442.7 171.2C441.3 199.7 473.7 228.3 473.2 257C472.7 285.7 439.3 314.3 452.8 343C466.3 371.7 526.7 400.3 559.3 428.8C592 457.3 597 485.7 592 514.2C587 542.7 572 571.3 564.5 585.7L557 600L0 600L0 585.7C0 571.3 0 542.7 0 514.2C0 485.7 0 457.3 0 428.8C0 400.3 0 371.7 0 343C0 314.3 0 285.7 0 257C0 228.3 0 199.7 0 171.2C0 142.7 0 114.3 0 85.8C0 57.3 0 28.7 0 14.3L0 0Z" fill="#940f16"></path>
-            <path id = "A21" style="visibility:hidden" d="M466 0L459.5 14.3C453 28.7 440 57.3 438.3 85.8C436.7 114.3 446.3 142.7 437 171.2C427.7 199.7 399.3 228.3 392.2 257C385 285.7 399 314.3 417.3 343C435.7 371.7 458.3 400.3 459.8 428.8C461.3 457.3 441.7 485.7 417.8 514.2C394 542.7 366 571.3 352 585.7L338 600L0 600L0 585.7C0 571.3 0 542.7 0 514.2C0 485.7 0 457.3 0 428.8C0 400.3 0 371.7 0 343C0 314.3 0 285.7 0 257C0 228.3 0 199.7 0 171.2C0 142.7 0 114.3 0 85.8C0 57.3 0 28.7 0 14.3L0 0Z" fill="#830b16"></path>
-            <path id = "A22" style="visibility:hidden" d="M343 0L351.2 14.3C359.3 28.7 375.7 57.3 376 85.8C376.3 114.3 360.7 142.7 367.3 171.2C374 199.7 403 228.3 402.5 257C402 285.7 372 314.3 371.8 343C371.7 371.7 401.3 400.3 392.8 428.8C384.3 457.3 337.7 485.7 338.8 514.2C340 542.7 389 571.3 413.5 585.7L438 600L0 600L0 585.7C0 571.3 0 542.7 0 514.2C0 485.7 0 457.3 0 428.8C0 400.3 0 371.7 0 343C0 314.3 0 285.7 0 257C0 228.3 0 199.7 0 171.2C0 142.7 0 114.3 0 85.8C0 57.3 0 28.7 0 14.3L0 0Z" fill="#710815"></path>
-            <path id = "A23" style="visibility:hidden" d="M310 0L302 14.3C294 28.7 278 57.3 270.8 85.8C263.7 114.3 265.3 142.7 276.3 171.2C287.3 199.7 307.7 228.3 303 257C298.3 285.7 268.7 314.3 268.8 343C269 371.7 299 400.3 297 428.8C295 457.3 261 485.7 253.3 514.2C245.7 542.7 264.3 571.3 273.7 585.7L283 600L0 600L0 585.7C0 571.3 0 542.7 0 514.2C0 485.7 0 457.3 0 428.8C0 400.3 0 371.7 0 343C0 314.3 0 285.7 0 257C0 228.3 0 199.7 0 171.2C0 142.7 0 114.3 0 85.8C0 57.3 0 28.7 0 14.3L0 0Z" fill="#600613"></path>
-            <path id = "A24" style="visibility:hidden" d="M232 0L227.7 14.3C223.3 28.7 214.7 57.3 204.8 85.8C195 114.3 184 142.7 186 171.2C188 199.7 203 228.3 214 257C225 285.7 232 314.3 239.7 343C247.3 371.7 255.7 400.3 246.2 428.8C236.7 457.3 209.3 485.7 198.5 514.2C187.7 542.7 193.3 571.3 196.2 585.7L199 600L0 600L0 585.7C0 571.3 0 542.7 0 514.2C0 485.7 0 457.3 0 428.8C0 400.3 0 371.7 0 343C0 314.3 0 285.7 0 257C0 228.3 0 199.7 0 171.2C0 142.7 0 114.3 0 85.8C0 57.3 0 28.7 0 14.3L0 0Z" fill="#4f0510"></path>
-            <path id = "A25" style="visibility:hidden" d="M192 0L182.8 14.3C173.7 28.7 155.3 57.3 153.7 85.8C152 114.3 167 142.7 174.7 171.2C182.3 199.7 182.7 228.3 181.2 257C179.7 285.7 176.3 314.3 178 343C179.7 371.7 186.3 400.3 191.2 428.8C196 457.3 199 485.7 198.3 514.2C197.7 542.7 193.3 571.3 191.2 585.7L189 600L0 600L0 585.7C0 571.3 0 542.7 0 514.2C0 485.7 0 457.3 0 428.8C0 400.3 0 371.7 0 343C0 314.3 0 285.7 0 257C0 228.3 0 199.7 0 171.2C0 142.7 0 114.3 0 85.8C0 57.3 0 28.7 0 14.3L0 0Z" fill="#3e050b"></path>
-            <path id = "A26" style="visibility:hidden" d="M72 0L73.7 14.3C75.3 28.7 78.7 57.3 77.5 85.8C76.3 114.3 70.7 142.7 74 171.2C77.3 199.7 89.7 228.3 93.2 257C96.7 285.7 91.3 314.3 91.2 343C91 371.7 96 400.3 102.5 428.8C109 457.3 117 485.7 117.5 514.2C118 542.7 111 571.3 107.5 585.7L104 600L0 600L0 585.7C0 571.3 0 542.7 0 514.2C0 485.7 0 457.3 0 428.8C0 400.3 0 371.7 0 343C0 314.3 0 285.7 0 257C0 228.3 0 199.7 0 171.2C0 142.7 0 114.3 0 85.8C0 57.3 0 28.7 0 14.3L0 0Z" fill="#2f0303"></path>
-        </svg>
-    </div>
-        
-    <section id = "first">
-        <div class="card card1">
-            <div class="card-body">
-              <span class="card-title"> <h1>Hey!👋</h1>  <h3>I am Morena Mphuthi</h3></span>
-              <br>
-              <p class="card-text">
-                A Computer System Engineer with some web smarts <br><br>
-                A passion for creating solutions whether it be in the software or hardware domain<br><br>
-                A student in the art of computer wizardry 🧙‍♂️
-              </p>
+        <section id="intro">
+
+            <!-- navigation bar -->
+            <div class="navContainer">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon "></span>
+                    </button>
+                    <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+                        <div class="navbar-nav ml-auto">
+                            <!-- <a class="nav-item nav-link" href="#"> <h6>About Me</h6> </a>
+                            <a class="nav-item nav-link" href="#"> <h6>Education</h6> </a>
+                            <a class="nav-item nav-link" href="#"> <h6>Projects</h6> </a> -->
+
+                            <a class="nav-item nav-link" href="#"> <h6>*</h6> </a>
+                            <a class="nav-item nav-link" href="#"> <h6>*</h6> </a>
+                            <a class="nav-item nav-link" href="#"> <h6>*</h6> </a>
+
+                        </div>
+                    </div>
+                </nav>
             </div>
-        </div> 
-    </section>
 
-    <svg 
-        id="sectionSvg1-2" 
-        viewBox="0 0 960 540" >
-            <path d="M0 295L22.8 296.5C45.7 298 91.3 301 137 307.8C182.7 314.7 228.3 325.3 274 351.3C319.7 377.3 365.3 418.7 411.2 424.3C457 430 503 400 548.8 385C594.7 370 640.3 370 686 376.2C731.7 382.3 777.3 394.7 823 402.7C868.7 410.7 914.3 414.3 937.2 416.2L960 418L960 541L937.2 541C914.3 541 868.7 541 823 541C777.3 541 731.7 541 686 541C640.3 541 594.7 541 548.8 541C503 541 457 541 411.2 541C365.3 541 319.7 541 274 541C228.3 541 182.7 541 137 541C91.3 541 45.7 541 22.8 541L0 541Z" fill="#000000"></path>
-            <path d="M0 409L22.8 417.2C45.7 425.3 91.3 441.7 137 436.3C182.7 431 228.3 404 274 403C319.7 402 365.3 427 411.2 420.8C457 414.7 503 377.3 548.8 371.5C594.7 365.7 640.3 391.3 686 405.3C731.7 419.3 777.3 421.7 823 425C868.7 428.3 914.3 432.7 937.2 434.8L960 437L960 541L937.2 541C914.3 541 868.7 541 823 541C777.3 541 731.7 541 686 541C640.3 541 594.7 541 548.8 541C503 541 457 541 411.2 541C365.3 541 319.7 541 274 541C228.3 541 182.7 541 137 541C91.3 541 45.7 541 22.8 541L0 541Z" fill="#43002d"></path>
-            <path d="M0 477L22.8 473.7C45.7 470.3 91.3 463.7 137 455.8C182.7 448 228.3 439 274 436.3C319.7 433.7 365.3 437.3 411.2 437C457 436.7 503 432.3 548.8 424.8C594.7 417.3 640.3 406.7 686 412.3C731.7 418 777.3 440 823 446.8C868.7 453.7 914.3 445.3 937.2 441.2L960 437L960 541L937.2 541C914.3 541 868.7 541 823 541C777.3 541 731.7 541 686 541C640.3 541 594.7 541 548.8 541C503 541 457 541 411.2 541C365.3 541 319.7 541 274 541C228.3 541 182.7 541 137 541C91.3 541 45.7 541 22.8 541L0 541Z" fill="#5b0041"></path>
-            <path d="M0 489L22.8 487.5C45.7 486 91.3 483 137 475C182.7 467 228.3 454 274 456.2C319.7 458.3 365.3 475.7 411.2 484.5C457 493.3 503 493.7 548.8 483.8C594.7 474 640.3 454 686 447.2C731.7 440.3 777.3 446.7 823 444C868.7 441.3 914.3 429.7 937.2 423.8L960 418L960 541L937.2 541C914.3 541 868.7 541 823 541C777.3 541 731.7 541 686 541C640.3 541 594.7 541 548.8 541C503 541 457 541 411.2 541C365.3 541 319.7 541 274 541C228.3 541 182.7 541 137 541C91.3 541 45.7 541 22.8 541L0 541Z" fill="#6e0152"></path>
-            <path d="M0 473L22.8 472.7C45.7 472.3 91.3 471.7 137 479C182.7 486.3 228.3 501.7 274 502C319.7 502.3 365.3 487.7 411.2 480.8C457 474 503 475 548.8 484.3C594.7 493.7 640.3 511.3 686 514C731.7 516.7 777.3 504.3 823 493.3C868.7 482.3 914.3 472.7 937.2 467.8L960 463L960 541L937.2 541C914.3 541 868.7 541 823 541C777.3 541 731.7 541 686 541C640.3 541 594.7 541 548.8 541C503 541 457 541 411.2 541C365.3 541 319.7 541 274 541C228.3 541 182.7 541 137 541C91.3 541 45.7 541 22.8 541L0 541Z" fill="#820263"></path>
-    </svg>
-    
-    <section id= "Second">
-        <h2>
-            My Skills.
-        </h2>
-            <img class="skillC++ skillimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/306px-ISO_C%2B%2B_Logo.svg.png" alt="C++image"><img src="" alt="">
-            <img class="skillC skillimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/380px-C_Programming_Language.svg.png?20201031132917" alt="C">
-            <img class="skillCB skillimg" src="https://upload.wikimedia.org/wikipedia/fr/thumb/8/89/Logo_Embarcadero_C%2B%2B_Builder.png/800px-Logo_Embarcadero_C%2B%2B_Builder.png" alt="c++builder">
-            <img class="skillP3 skillimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Processing_3_logo.png/600px-Processing_3_logo.png?20180317063802" alt="processing3">
-            <img class="skillFlut skillimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Google-flutter-logo.svg/1920px-Google-flutter-logo.svg.png" alt="flutter">
-            <img class="skillMdb skillimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/1920px-MongoDB_Logo.svg.png" alt="mdb">
-            <img class="skillhtml skillimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/800px-HTML5_logo_and_wordmark.svg.png" alt="html">
-            <img class="skillcss skillimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/CSS.3.svg/428px-CSS.3.svg.png?20160504153216" alt="css">
-            <img class="skilljs skillimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Javascript-shield.svg/397px-Javascript-shield.svg.png?20180912181046" alt="js">
-            <img class="skillgit skillimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1920px-Git-logo.svg.png" alt="git">
+            <!-- intro Title -->
+            <div >
+                <h5 class="introTitle">
+                    Hi! I am Morena <br>
+                    A <span class="highlightText"> Computer Systems Engineer</span> <br> 
+                    with some web smarts
+                </h5>
+            </div>
+
+            <!-- intro button -->
+            <div class="container btnContainer">
+                <button type="button" class="btn btn-info "> <h6 class="btnFont">Hire Me !</h6> </button>
+            </div>
+               
+            
+
+            <svg class="landSecSvg" width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                
+                <line class="line7" x1="1199.91" y1="487.635" x2="350.635" y2="1200.27" stroke="#B01B2F" stroke-width="8" stroke-linecap="round"/>
+                <line class="line6" x1="1213.54" y1="442.635" x2="304.635" y2="1205.3" stroke="#3B187E" stroke-width="8" stroke-linecap="round"/>
+                <line class="line5" x1="1207.06" y1="410.635" x2="253.635" y2="1210.65" stroke="#0D00D3" stroke-width="8" stroke-linecap="round"/>
+                <line class="line4" x1="1212.93" y1="369.635" x2="202.635" y2="1217.37" stroke="#FA302C" stroke-width="8" stroke-linecap="round"/>
+                <line class="line3" x1="1222.6" y1="325.635" x2="152.635" y2="1223.49" stroke="#FA302C" stroke-width="8" stroke-linecap="round"/>
+                <line class="line2" x1="1222.81" y1="288.636" x2="104.636" y2="1229.49" stroke="#0D00D3" stroke-width="8" stroke-linecap="round"/>
+                <line class="line1" x1="1244.94" y1="232.635" x2="44.6353" y2="1239.6" stroke="#3B187E" stroke-width="8" stroke-linecap="round"/>
+                <line class="line0" x1="1244.02" y1="194.635" x2="45.6353" y2="1200.32" stroke="#B01B2F" stroke-width="8" stroke-linecap="round"/>
+            </svg>
+                
         </section>
-    
 
-    <div id= "notYet">
-        <h1>
-            Its not responsive yet , but im working on it🐱‍💻🔨🔨👨‍🏭
-        </h1>
-        <h2> 
-            View this site on a computer screen please
-        </h2>
-        <p>
-            Maybe at a later date or whenever I get time i will make it phone and tablet friendly with some bootstrap,
-            I've already used a card so why not use the container grid system while Im at it. <br><br>
-            note to self: <br>
-            make a prettier screen for this 😐
-        </p>
-    </div>
-    
-    <script src="index.js"></script>
-</body>
+        <section id="aboutMe">
+        </section>
+
+        <section id="edu">
+        </section>
+
+        <section id="skills">
+        </section>
+
+        <section id="projects">
+        </section>
+
+        <section id="hireMe">
+        </section>
+
+    </body>
+
 </html>
