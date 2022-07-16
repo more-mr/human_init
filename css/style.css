@@ -1,3 +1,5 @@
+/*=============================================General style==============================================*/
+
 body{
     font-weight: 600;
 }
@@ -5,10 +7,48 @@ body{
 p{
  color:#0D00D3
 }
-/*========================================================================*/
+
+.btnContainer{
+    text-align: center;
+    padding: 25vh 0 0 0;
+}
+
+.btn{
+padding: 10px 45px;
+color: #0D00D3;
+background: #d9d9d9;
+border: none;
+}
+
+.btnFont{
+font-weight: 700;
+}
+
+.secTitle{
+text-align: right;
+padding: 0 5% 5% 0%;
+color: #0D00D3;
+}
+
+.dotSpacer {
+font-size: 100px;
+color: #B01B2F;
+margin-top: -10vh;
+text-align: center;
+}
+
+/*======================================intro section specific style======================================*/
 #intro{
     height: 100vh;
     /* background: aquamarine; */
+}
+
+.introSecSvg{
+    width: 100%;
+
+    position: absolute;
+    top: -30vh;
+    z-index: -2;
 }
 
 .navContainer{
@@ -30,152 +70,224 @@ a > h6{
     color: #fa302c
 }
 
-.introSecSvg{
-    width: 100%;
-
+/* =================================About me section specific style======================================*/
+#aboutMe{
+    /* background: antiquewhite; */
+    height: 100vh;
+}
+.imgShadow{
+    background: #fa302c;
+    border-radius: 40px;
+    width: 85%;
+    height: 95%;
     position: absolute;
-    top: -30vh;
+    top: -5%;
+    left: -6%;
+    z-index: -2;
+}
+
+.myImg{
     z-index: -1;
+    width: 100%;
+    position: relative;
+    border-radius: 80px;
+    padding:5%
+
 }
 
-/*========================================================================*/
-
-.btnContainer{
-        text-align: center;
-        padding: 25vh 0 0 0;
+.aboutSecSvg{
+    /* background: aquamarine; */
+    position: absolute;
+    z-index: 0;
+    left: -22vw;
+    top: 143vh;
+    width: 40%;
 }
 
-.btn{
-    padding: 10px 45px;
-    color: #0D00D3;
-    background: #d9d9d9;
-    border: none;
-}
+/* =================================Education section specific style======================================*/
 
-.btnFont{
-    font-weight: 700;
-}
-
-.secTitle{
-    text-align: right;
-    padding: 0 5% 5% 0%;
-    color: #0D00D3;
-}
-
-.dotSpacer {
-    font-size: 100px;
-    color: #B01B2F;
-    margin-top: -10vh;
-    text-align: center;
-}
-
-@media (max-width: 830px){
-
-    .landSecSvg{
-        top: -90vw;
-    }
+#edu{
+    /* background: antiquewhite; */
+    height: 100vh;
 }
 
 .midEduBorder{
     border-style: none solid;
 }
 
-
-/* ======================================intro section line movement========================================*/
-
-.line0 {
-    stroke-dasharray: 350 , 1500;
-    stroke-dashoffset: 1600;
-    animation: dash0 50s ease-in-out infinite;
+.subTitle{
+    color: #B01B2F;
+    padding: 10% 0% 0% 8%;
+    /* background: aliceblue; */
 }
 
-@keyframes dash0 {
+.eduSecSvg{
+    /* background: aqua; */
+    width: 100%;
+    margin-top: -15vh;
+    position: absolute;
+    z-index: -1;
+}
+
+.skills{
+    color: #3B187E;
+    text-align: center;
+    /* background: antiquewhite; */
+    padding: 10vh 0 0 0;
+}
+/*========================================================================*/
+
+@media (max-width: 991px){
+
+    #aboutMe{
+        /* background: antiquewhite; */
+        height: auto;
+    }
+}
+
+@media (max-width: 760px){
+    .aboutSecSvg{
+        top: 100vh;
+    }
+}
+
+@media (max-width: 360px){
+    .aboutSecSvg{
+        display: none;
+    }
+}
+
+/* ======================================line movement========================================*/
+/* intro section  */
+
+.aline0 {
+    stroke-dasharray: 350 , 1500;
+    stroke-dashoffset: 1600;
+    animation: adash0 50s ease-in-out infinite;
+}
+
+@keyframes adash0 {
     to {
       stroke-dashoffset: -250;
     }
 }
 
-.line1 {
+.aline1 {
     stroke-dasharray: 450 , 1500;
     stroke-dashoffset: 1898;
-    animation: dash1 50s linear infinite;
+    animation: adash1 50s linear infinite;
 }
 
-@keyframes dash1 {
+@keyframes adash1 {
     to {
       stroke-dashoffset: -53;
     }
 }
 
-.line2 {
+.aline2 {
     stroke-dasharray: 450 , 1500;
     stroke-dashoffset: 1777;
-    animation: dash2 50s cubic-bezier(0.23, 0.1, 0, 0.34) infinite;
+    animation: adash2 50s cubic-bezier(0.23, 0.1, 0, 0.34) infinite;
 }
 
-@keyframes dash2 {
+@keyframes adash2 {
     to {
       stroke-dashoffset: -173;
     }
 }
 
-.line3 {
+.aline3 {
     stroke-dasharray: 440 , 1500;
     stroke-dashoffset: 1908;
-    animation: dash3 50s cubic-bezier(0.59, 0.07, 0.38, 1.04) infinite;
+    animation: adash3 50s cubic-bezier(0.59, 0.07, 0.38, 1.04) infinite;
 }
 
-@keyframes dash3 {
+@keyframes adash3 {
     to {
       stroke-dashoffset: -30;
     }
 }
 
-.line4 {
+.aline4 {
     stroke-dasharray: 422 , 1500;
     stroke-dashoffset: 1828;
-    animation: dash4 50s linear infinite;
+    animation: adash4 50s linear infinite;
 }
 
-@keyframes dash4 {
+@keyframes adash4 {
     to {
       stroke-dashoffset: -93;
     }
 }
 
-.line5 {
+.aline5 {
     stroke-dasharray: 350 , 1500;
     stroke-dashoffset: 1831;
-    animation: dash5 50s ease-in-out infinite;
+    animation: adash5 50s ease-in-out infinite;
 }
 
-@keyframes dash5 {
+@keyframes adash5 {
     to {
       stroke-dashoffset: -15;
     }
 }
 
-.line6 {
+.aline6 {
     stroke-dasharray: 482 , 1500;
     stroke-dashoffset: 1907;
-    animation: dash6 50s ease-in-out infinite;
+    animation: adash6 50s ease-in-out infinite;
 }
 
-@keyframes dash6 {
+@keyframes adash6 {
     to {
       stroke-dashoffset: -75;
     }
 }
 
-.line7 {
+.aline7 {
     stroke-dasharray: 290 , 1500;
     stroke-dashoffset: 1790;
-    animation: dash7 50s ease-in-out infinite;
+    animation: adash7 50s ease-in-out infinite;
 
 }
 
-@keyframes dash7 {
+@keyframes adash7 {
     to {
       stroke-dashoffset: 0;
+    }
+}
+
+/* Education, Skill Subsection */
+
+.bline0{
+    stroke-dasharray: 391 , 512;
+    stroke-dashoffset: 700;
+    animation: bdash0 35s ease-in-out alternate infinite;
+}
+@keyframes bdash0 {
+    to {
+      stroke-dashoffset: 500;
+    }
+}
+
+.bline1{
+    stroke-dasharray: 512 , 512;
+    stroke-dashoffset: -55;
+    animation: bdash1 30s ease-in-out alternate infinite;
+}
+@keyframes bdash1 {
+    to {
+      stroke-dashoffset: -250;
+    }
+}
+
+.bline2{
+    stroke-dasharray: 300 , 512;
+    stroke-dashoffset: 460;
+    animation: bdash2 45s ease-in-out alternate infinite;
+}
+@keyframes bdash2 {
+    to {
+      stroke-dashoffset: 600;
     }
 }
