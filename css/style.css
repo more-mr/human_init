@@ -28,6 +28,7 @@ font-weight: 700;
 text-align: right;
 padding: 0 5% 5% 0%;
 color: #0D00D3;
+font-weight: 700;
 }
 
 .dotSpacer {
@@ -58,6 +59,8 @@ text-align: center;
 a > h6{
     padding: 0 10px 0 10px;
     color: #0D00D3;
+    font-weight: 700;
+
 }
 
 .introTitle{
@@ -135,7 +138,20 @@ a > h6{
     /* background: antiquewhite; */
     padding: 10vh 0 0 0;
 }
+/* =======================Get in touch section specific style======================================*/
+#inTouch{
+    height:35vh;
+    text-align: center;
+}
+
+#footer{
+    text-align: center;
+    color: #3B187E;
+    font-size: 12px;
+}
+
 /*========================================================================*/
+
 
 @media (max-width: 991px){
 
