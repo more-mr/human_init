@@ -2,7 +2,7 @@ document.getElementsByClassName("hero__description")[0].innerHTML= "<button oncl
 
 
 async function getData() {
-  const url = "https://example.org/products.json";
+  const url = "https://microsoftedge.github.io/Demos/json-dummy-data/64KB.json";
   try {
     const response = await fetch(url);
     if (!response.ok) {
